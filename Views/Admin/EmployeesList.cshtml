@@ -1,0 +1,55 @@
+﻿@model List<ZeroHunger.Models.Employee>
+@{
+    ViewBag.Title = "EmployeesList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Employees List</h2>
+
+<table class="table">
+
+    <thead>
+        <tr>
+            <td>
+                Employee ID
+            </td>
+            <td>
+                Name
+            </td>
+            <td>
+                Address
+            </td>
+            <td>
+                Phone
+            </td>
+            <td>
+                Join Date
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+
+            <tr>
+
+                <td>
+                    @emp.EmployeeId
+                </td>
+                <td>
+                    @emp.Name
+                </td>
+                <td>
+                    @emp.Address
+                </td>
+                <td>
+                    @emp.Phone
+                </td>
+                <td>
+                    @emp.JoinDate
+                </td>
+            </tr>
+        }
+        s
+    </tbody>
+</table>
